@@ -1,0 +1,9 @@
+[user]
+	name = Phil Hindman
+	email = pahindman@yahoo
+[credential]
+	helper = osxkeychain
+[color]
+	ui = true
+[core]
+	editor = vim

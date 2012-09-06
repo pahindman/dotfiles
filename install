@@ -1,0 +1,21 @@
+#!/bin/sh
+
+common_install()
+{
+   cp .bash_profile ~
+   cp .bashrc ~
+   cp .gitconfig ~
+   cp .gvimrc ~
+   cp .inputrc ~
+   cp .profile ~
+   cp .vimrc ~
+}
+
+Darwin_install()
+{
+   common_install
+   cp .fonts/* ~/Library/Fonts
+   cp -R .vim ~
+}
+
+$(uname)_install
