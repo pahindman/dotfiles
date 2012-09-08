@@ -1,0 +1,8 @@
+[user]
+	name = Phil Hindman
+	email = phil.hindman@gmail.com
+[diff]
+[merge]
+	tool = gvimdiff
+[core]
+	editor = vim.exe

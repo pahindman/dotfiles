@@ -15,7 +15,7 @@ set HOME=%HOMEDRIVE%%HOMEPATH%
 
 copy .bash_profile %HOME% >nul
 copy .bashrc %HOME% >nul
-REM copy .gitconfig %HOME% >nul
+copy windows\.gitconfig %HOME% >nul
 copy .gvimrc %HOME% >nul
 copy .inputrc %HOME% >nul
 copy .profile %HOME% >nul
