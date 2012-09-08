@@ -4,7 +4,6 @@ common_install()
 {
    cp .bash_profile ~
    cp .bashrc ~
-   cp .gitconfig ~
    cp .gvimrc ~
    cp .inputrc ~
    cp .profile ~
@@ -14,6 +13,7 @@ common_install()
 Darwin_install()
 {
    common_install
+   cp macosx/.gitconfig ~
    cp .fonts/* ~/Library/Fonts
    cp -R .vim ~
 }
