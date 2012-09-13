@@ -17,3 +17,8 @@ if [ -f /opt/local/etc/bash_completion ]; then
 fi
 
 set -o ignoreeof
+
+case $OSTYPE in
+   cygwin) PS1="\\!:\\w\\$ ";;
+   *) PS1="\!:\u@\h:\W\$ ";;
+esac
