@@ -248,7 +248,12 @@ if version >= 500
 
    " Try colorschemes in reverse order of preference
    silent! colorscheme BlackBeauty
-   silent! colorscheme solarized
+
+   " For now only use solarized on Linux and MacOS X - on Windows with the
+   " default color mappings it looks really ugly
+   if has("unix") || has("macunix")
+      silent! colorscheme solarized
+   endif
    syntax enable
 
    "}}}
