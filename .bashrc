@@ -18,7 +18,20 @@ fi
 
 set -o ignoreeof
 
-case $OSTYPE in
-   cygwin) PS1="\\!:\\w\\$ ";;
-   *) PS1="\!:\u@\h:\W\$ ";;
-esac
+# Use bash-it if it is installed
+if [ -x $HOME/.bash_it/bash_it.sh ]; then
+   # Path to the bash it configuration
+   export BASH_IT=$HOME/.bash_it
+
+   # Lock and Load a custom theme file
+   # location /.bash_it/themes/
+   export BASH_IT_THEME='phil'
+
+   # Load Bash It
+   source $BASH_IT/bash_it.sh
+else
+   case $OSTYPE in
+      cygwin) PS1="\\!:\\w\\$ ";;
+      *) PS1="\!:\u@\h:\W\$ ";;
+   esac
+fi
