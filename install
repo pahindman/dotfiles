@@ -13,7 +13,9 @@ common_install()
 cygwin_install()
 {
    common_install
-   cp windows/.gitconfig ~
+   # The .gitconfig is incomplete, so its contents should be manually merged
+   # into ~/.gitconfig
+   #cp windows/.gitconfig ~
    cscript.exe windows/install_fonts.vbs
    mkdir -p ~/vimfiles
    cp -R .vim/* ~/vimfiles
@@ -22,7 +24,9 @@ cygwin_install()
 darwin_install()
 {
    common_install
-   cp macosx/.gitconfig ~
+   # The .gitconfig is incomplete, so its contents should be manually merged
+   # into ~/.gitconfig
+   #cp macosx/.gitconfig ~
    cp .fonts/* ~/Library/Fonts
    cp -R .vim ~
 }
