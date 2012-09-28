@@ -4,3 +4,4 @@
 	ui = true
 [core]
 	editor = vim
+	autocrlf = input
