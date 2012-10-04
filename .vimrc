@@ -32,6 +32,8 @@ if version >= 500
    set nowrap
    " When a new window is split, put it below the current window
    set splitbelow
+   " Highlight the current line
+   set cursorline
    " Number of lines of context to keep below (or above) the cursor when
    " scrolling down (or up).
    "set scrolloff=5
