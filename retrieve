@@ -1,0 +1,33 @@
+#!/bin/bash
+
+common_retrieve()
+{
+   cp ~/.bash_profile .
+   cp ~/.bashrc .
+   cp ~/.gvimrc .
+   cp ~/.inputrc .
+   cp ~/.profile .
+   cp ~/.vimrc .
+}
+
+cygwin_retrieve()
+{
+   common_retrieve
+   # The .gitconfig is incomplete, so its contents should be manually merged
+   # from ~/.gitconfig
+   cp ~/.gitconfig windows
+   cp -R ~/vimfiles/* .vim
+}
+
+darwin_retrieve()
+{
+   common_retrieve
+   # The .gitconfig is incomplete, so its contents should be manually merged
+   # from ~/.gitconfig
+   cp ~/.gitconfig macosx
+   cp -R ~/.vim .
+}
+
+# Call the OS-specific install function.  On Mac OS X the OSTYPE ends with a
+# number that signifies the darwin release number, so strip that off.
+${OSTYPE//[0-9.]}_retrieve
