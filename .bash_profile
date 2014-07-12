@@ -13,3 +13,11 @@ if [ -f ~/.profile ]; then source ~/.profile; fi
 if [[ $- == *i* && -f ~/.bashrc ]]; then source ~/.bashrc; fi
 
 # finally, do any other bash specific items
+
+# Add my personal programs to the path
+PATH=~/bin:$PATH
+export PATH
+
+P4CONFIG=.p4config
+export P4CONFIG
+
