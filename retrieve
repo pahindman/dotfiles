@@ -4,6 +4,7 @@ common_retrieve()
 {
    cp ~/.bash_profile .
    cp ~/.bashrc .
+   cp ~/.emacs .
    cp ~/.gvimrc .
    cp ~/.inputrc .
    cp ~/.profile .

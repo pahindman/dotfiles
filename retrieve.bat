@@ -18,6 +18,7 @@ REM from %HOME\.gitconfig
 REM copy %HOME%\.gitconfig windows\.gitconfig  >nul
 copy %HOME%\.bash_profile .bash_profile >nul
 copy %HOME%\.bashrc .bashrc >nul
+copy %HOME%\.emacs .emacs >nul
 copy %HOME%\.gvimrc .gvimrc >nul
 copy %HOME%\.inputrc .inputrc >nul
 copy %HOME%\.profile .profile >nul
