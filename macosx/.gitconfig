@@ -1,7 +1,11 @@
+[user]
+	name = Phil Hindman
+	email = phil.hindman@gmail.com
 [credential]
 	helper = osxkeychain
 [color]
 	ui = true
 [core]
 	editor = vim
-	autocrlf = input
+[push]
+	default = matching
