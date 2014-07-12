@@ -9,11 +9,15 @@
 
 # Source system-wide aliases and functions
 if [ -f /etc/bashrc ]; then
-   source /etc/bashrc
+   . /etc/bashrc
 fi
 
 if [ -f /opt/local/etc/bash_completion ]; then
-   source /opt/local/etc/bash_completion
+   . /opt/local/etc/bash_completion
+fi
+
+if [ -f /Users/pahindman/macports/etc/profile.d/bash_completion.sh ]; then
+   . /Users/pahindman/macports/etc/profile.d/bash_completion.sh
 fi
 
 set -o ignoreeof
@@ -28,7 +32,7 @@ if [ -x $HOME/.bash_it/bash_it.sh ]; then
    export BASH_IT_THEME='phil'
 
    # Load Bash It
-   source $BASH_IT/bash_it.sh
+   . $BASH_IT/bash_it.sh
 else
    case $OSTYPE in
       cygwin) PS1="\\!:\\w\\$ ";;
