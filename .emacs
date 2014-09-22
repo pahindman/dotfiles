@@ -33,11 +33,16 @@ return nil."
 (when (try-install-package 'color-theme-solarized)
    (color-theme-solarized-dark))
 
-(when (try-install-package 'auto-complete)
-   (require 'auto-complete-config)
-   (ac-config-default)
-   (setq ac-auto-start 3)
-   (setq ac-use-fuzzy t))
+(when (try-install-package 'company)
+  (add-hook 'after-init-hook 'global-company-mode)
+  (require 'color)
+  (let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+      `(company-tooltip           ((t (:inherit default :background ,(color-lighten-name bg 8)))))
+      `(company-scrollbar-bg      ((t (                 :background ,(color-lighten-name bg 22)))))
+      `(company-scrollbar-fg      ((t (                 :background ,(color-lighten-name bg 15)))))
+      `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+      `(company-tooltip-common    ((t (:inherit font-lock-constant-face)))))))
 
 (try-install-package 'magit)
 (try-install-package 'p4)
@@ -118,4 +123,8 @@ return nil."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(company-scrollbar-bg ((((class color) (min-colors 89)) (:background "#eee8d5" :foreground "#2aa198"))))
+ '(company-scrollbar-fg ((((class color) (min-colors 89)) (:foreground "#fdf6e3" :background "#657b83"))))
+ '(company-tooltip ((((class color) (min-colors 89)) (:background "#eee8d5" :foreground "#2aa198"))))
+ '(company-tooltip-common ((((class color) (min-colors 89)) (:foreground "#586e75" :underline t))))
+ '(company-tooltip-selection ((((class color) (min-colors 89)) (:background "#69CABF" :foreground "#00736F")))))
