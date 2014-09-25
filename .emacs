@@ -21,7 +21,8 @@ return nil."
    (require package nil t))
 
 (when (try-install-package 'evil)
-   (evil-mode 1))
+  (evil-mode 1)
+  (setq-default evil-shift-width 3))
 
 (when (try-install-package 'lua-mode)
    (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
@@ -118,7 +119,7 @@ return nil."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(evil-shift-width 3))
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
