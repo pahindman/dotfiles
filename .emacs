@@ -12,7 +12,8 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (defun try-install-package (package)
-   "Try to install and use package.
+   "Try to install and require the package.
+If the package is already installed, then simply 'require' it.
 Return t if installing and requiring the package succeeds, otherwise
 return nil."
    (unless (package-installed-p package)
