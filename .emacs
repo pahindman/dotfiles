@@ -53,6 +53,9 @@ return nil."
 (try-install-package 'magit)
 (try-install-package 'p4)
 
+(require 'ido)
+(ido-mode t)
+
 ; when multiple buffers with the same name are loaded, use the parent
 ; directory names to uniquify the names
 (require 'uniquify)
