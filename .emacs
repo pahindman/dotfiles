@@ -20,6 +20,9 @@ return nil."
       (with-demoted-errors (package-install package)))
    (require package nil t))
 
+(when (try-install-package 'evil-leader)
+  (global-evil-leader-mode))
+
 (when (try-install-package 'evil)
   (evil-mode 1)
   (setq-default evil-shift-width 3))
