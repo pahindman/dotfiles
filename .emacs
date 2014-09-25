@@ -49,6 +49,7 @@ return nil."
       `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
       `(company-tooltip-common    ((t (:inherit font-lock-constant-face)))))))
 
+(try-install-package 'rainbow-mode)
 (try-install-package 'magit)
 (try-install-package 'p4)
 
